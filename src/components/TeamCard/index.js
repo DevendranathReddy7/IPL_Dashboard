@@ -6,11 +6,12 @@ import './index.css'
 const TeamCard = () => {
   const [teams, setTeams] = useState([])
   const [loading, setLoading] = useState(true)
+  // eslint-disable-next-line
   const history = useHistory()
 
   useEffect(() => {
     async function getTeams() {
-      const response = await fetch('https://apis.ccbp.in/ipl', {method: 'GET'})
+      const response = await fetch('https://apis.ccbp.in/ipl')
       if (response.ok) {
         const data = await response.json()
         setTeams(data.teams)
@@ -40,7 +41,7 @@ const TeamCard = () => {
                     />
                   </div>
                   <div>
-                    <h3>{team.name}</h3>
+                    <p>{team.name}</p>
                   </div>
                 </li>
               </Link>

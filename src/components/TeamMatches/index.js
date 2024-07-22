@@ -44,9 +44,7 @@ const TeamMatches = () => {
       default:
     }
     async function getMatches() {
-      const response = await fetch(`https://apis.ccbp.in/ipl/${id}`, {
-        method: 'GET',
-      })
+      const response = await fetch(`https://apis.ccbp.in/ipl/${id}`)
 
       if (response.ok) {
         const res = await response.json()
@@ -72,7 +70,7 @@ const TeamMatches = () => {
 
       {!loading && <MatchCard recentMatches={recentMatches} />}
       {loading && (
-        <center data-testid="loader">
+        <center testid="loader">
           <Loader type="Oval" color="#ffffff" height={50} width={50} />
         </center>
       )}

@@ -7,7 +7,7 @@ const MatchCard = ({recentMatches}) => {
           <div>
             <img
               src={match.competing_team_logo}
-              alt={`latest match ${match.competing_team}`}
+              alt={`competing team ${match.competing_team}`}
               className="result__team"
             />
           </div>

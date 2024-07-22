@@ -1,21 +1,21 @@
 const LatestMatch = ({latestMatchDetails}) => {
-  console.log('--')
+  console.log('--', latestMatchDetails)
   return (
     <div>
       <h3 style={{margin: '1% 10%'}}>Latest Matches</h3>
 
       <div className="recent_match">
         <div>
-          <h1>{latestMatchDetails.competing_team}</h1>
-          <h3>{latestMatchDetails.date}</h3>
+          <p>{latestMatchDetails.competing_team}</p>
+          <p>{latestMatchDetails.date}</p>
           <p>{latestMatchDetails.venue}</p>
-          <p>{latestMatchDetails.venue}</p>
+          <p>{latestMatchDetails.result}</p>
         </div>
 
         <div className="team_logo_center">
           <img
             src={latestMatchDetails.competing_team_logo}
-            alt="Example response"
+            alt={`latest match ${latestMatchDetails.competing_team}`}
             className="opponenet__logo"
           />
         </div>

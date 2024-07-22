@@ -1,5 +1,6 @@
-import './App.css'
 import {Switch, Route, Redirect} from 'react-router-dom'
+import './App.css'
+
 import Home from './components/Home'
 import TeamMatches from './components/TeamMatches'
 import NotFoundPage from './components/NotFound'
